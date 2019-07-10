@@ -12,9 +12,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App row">
-        <Chat currentUsername={this.state.currentUsername[0]} />
-        <Chat currentUsername={this.state.currentUsername[1]} />
+      <div className="container">
+        <div className="row">
+          <Chat currentUsername={this.state.currentUsername[0]} />
+          <Chat currentUsername={this.state.currentUsername[1]} />
+        </div>
       </div>
     );
   }
