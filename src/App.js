@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Chat from './components/Chat'
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      currentUsername: [ 'Laura', 'Rob' ]
+    }
+  }
+
+  render() {
+    return (
+        <div className="container mt-5">
+            <div className="row">
+                <Chat currentUsername={ this.state.currentUsername[ 0 ] } />
+                <div className="col-1" />
+                <Chat currentUsername={ this.state.currentUsername[ 1 ] } />
+            </div>
+        </div>
+    );
+  }
 }
 
 export default App;
