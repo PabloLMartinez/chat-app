@@ -5,9 +5,9 @@ class TypingIndicator extends Component {
         if (this.props.typingUsers.length > 0) {
             return (
                 <div>
-                    {`${this.props.typingUsers
+                    {`${ this.props.typingUsers
                         .slice(0, 2)
-                        .join(' and ')} is typing`}
+                        .join(' and ') } is typing`}
                 </div>
             )
         }
